@@ -1,0 +1,19 @@
+<div class="container-fluid mt-3">
+    <h3>Producty details</h3>
+    <dl>
+        <dt>Name</dt>
+        <dd [innerHTML] = "Product.Name"></dd>
+        <dd>
+            <input type="text" [value]="Product.Name">
+        </dd>
+        <dt>
+            Price
+        </dt>
+        <dd>{{Product.Price}}</dd>
+        <dt>Stock</dt>
+        <dd>{{(Product.Stock == true)? "Available":"Out of Stock"}}</dd>
+
+    </dl>
+    <button [disabled]="isInvalid" class="btn btn-primary">Add Product</button>
+
+</div>
